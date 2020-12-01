@@ -7,7 +7,7 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 // on linux better sudo apt-get install firefox-geckodriver
 
-public class GeckoDriver implements LinuxChecker {
+public class GeckoDriver implements SystemChecker {
 	protected WebDriver getPureGeckoDriver() {
 		if (!isLinux()) {
 			URL url = ClassLoader.getSystemResource("geckodriverWindows.exe");
