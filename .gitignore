@@ -4,3 +4,5 @@ debug.log
 /screenshots/
 .classpath
 .settings/
+
+echo .DS_Store >> .gitignore
