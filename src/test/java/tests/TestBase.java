@@ -1,6 +1,7 @@
 package tests;
 
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.FindBy;
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
@@ -20,6 +21,8 @@ public class TestBase {
 		baseUrl = manager.baseUrl;
 		context.setAttribute("driver", driver);
 	}
+	
+
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
