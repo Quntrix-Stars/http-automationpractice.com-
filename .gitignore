@@ -4,3 +4,6 @@ debug.log
 /screenshots/
 .classpath
 .settings/
+.idea/
+.project
+Stars.iml
