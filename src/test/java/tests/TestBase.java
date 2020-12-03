@@ -26,7 +26,7 @@ public class TestBase {
 
 	@AfterMethod
 	public void afterMethod(ITestResult result) {
-		driver.close();
+		//driver.close();
 	}
 
 }
