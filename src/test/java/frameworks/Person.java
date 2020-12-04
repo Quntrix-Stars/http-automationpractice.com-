@@ -3,7 +3,7 @@ package frameworks;
 public class Person {
 	String firstName = "John";
 	String lastName = "Doe";
-	String email = "fakeemail@gmail.com";
+	String email = "fakeemail3@gmail.com";
 	String password = "password12345";
 	String address = "Fake Street St";
 	String city = "Dallas";
