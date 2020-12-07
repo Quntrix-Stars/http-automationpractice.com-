@@ -1,9 +1,12 @@
 package tests;
 
+import fundamentals.FailListener;
 import org.testng.Assert;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 import pages.SubcategoryPage;
 
+@Listeners(FailListener.class)
 public class Subcategory extends TestBase {
     @Test
     public void subcat() {
