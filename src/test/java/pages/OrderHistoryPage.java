@@ -14,26 +14,28 @@ public class OrderHistoryPage extends CheckOutPage {
 		PageFactory.initElements(driver, this);
 	}
 
-	@FindBy(xpath = "//*[@id=\"center_column\"]/div")
-	WebElement orderBox;
+	@FindBy(xpath = "//*[@id=\"center_column\"]/p/a")
+	WebElement backToOrders;
+	
+	@FindBy(xpath = "//*[@id=\"order-list\"]/tbody/tr[1]/td[1]/a")
+	WebElement lastOrderRef;
+	
+	public OrderHistoryPage returnToOrders() {
+		backToOrders.click();
+		return this;
+	}
+	
+	public String getLastOrderNo() {
+		return lastOrderRef.getText();
+	}
+	
 
 	public String getOrderNumber() {
-	String script="function getStr(){\r\n"
-			+ "return document.getElementById('center_column').children[2].childNodes[22].textContent.substring(9,0)\r\n"
-			+ "}"
-			+ "return getStr()";
-		JavascriptExecutor js=(JavascriptExecutor) driver;
-		System.out.println((String)js.executeAsyncScript(script));
-		
-		
-		
-		//$x("//*[@id='center_column']")[0].children[2].childNodes[22].textContent
-		
-//		System.out.println(waitVisibilityXPath(driver, "//*[@id=\"center_column\"]/div/text()[12]"));
-		
-//		String ordN = orderNumber.substring(0, 8);
-//		return ordN;
-		return null;
+		String script = "function getStr(){"
+				+ "return document.getElementById('center_column').children[2].childNodes[20].textContent.substring(47,47+9)"
+				+ "}" + "return getStr()";
+		JavascriptExecutor js = (JavascriptExecutor) driver;
+		return (String) js.executeScript(script);
 	}
 
 	@Override
